@@ -68,7 +68,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;X-MandrivaLinux-MoreApplications-Games-Cards
+Categories=GNOME;GTK;X-MandrivaLinux-MoreApplications-Games-Cards;
 EOF
 
 %clean
