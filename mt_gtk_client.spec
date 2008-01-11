@@ -42,21 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 
 # mv %buildroot/usr/bin/%{_target_cpu}-mandrake-linux-gnu-%name %buildroot/usr/bin/%name
 
-mkdir -p $RPM_BUILD_ROOT/{%_menudir,%_miconsdir,%_iconsdir,%_liconsdir}
 cp %SOURCE10 $RPM_BUILD_ROOT%_miconsdir/%name.png
 cp %SOURCE11 $RPM_BUILD_ROOT%_iconsdir/%name.png
 cp %SOURCE12 $RPM_BUILD_ROOT%_liconsdir/%name.png
 
-cat >$RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}):\
-command="%{_bindir}/%{name}"\
-title="Maitretarot"\
-longtitle="Maitretarot Client"\
-needs="x11"\
-section="More applications/Games/Cards"\
-icon="%{name}.png" \
-xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -85,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 %{_bindir}/*
 %{_datadir}/applications/mandriva-%{name}.desktop
-%{_menudir}/%name
 %{_miconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_liconsdir}/%name.png
