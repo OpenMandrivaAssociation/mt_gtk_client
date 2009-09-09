@@ -1,6 +1,6 @@
 %define name mt_gtk_client
 %define version 0.1.98
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary: A Maitretarot GTK+ client
 Name: %{name}
