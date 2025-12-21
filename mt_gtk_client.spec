@@ -15,6 +15,11 @@ Source12: %name-48.png
 URL: https://www.nongnu.org/maitretarot/
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: cardpics
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: glib2-devel gtk+2-devel libmaitretarot-devel libmt_client-devel
 BuildRequires: libxml2-devel
 Provides: maitretarot-client
